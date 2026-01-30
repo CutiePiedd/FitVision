@@ -1,0 +1,59 @@
+/* --- Header --- */
+header {
+    background: var(--white);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+   /* CHANGE THESE LINES: */
+    position: fixed;   /* Forces it to float on top of the screen */
+    top: 0;            /* Sticks it to the very top edge */
+    left: 0;           /* Sticks it to the left edge */
+    width: 100%;       /* Ensures it stretches across the full screen */
+    z-index: 1000;     /* Ensures it sits on top of all other images/text */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #5f6c7b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    color: #48dbfb;
+    font-size: 1.8rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.btn-login {
+    background: var(--gradient-blue);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
