@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitVision - Create Account</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="logo-overlay">
+        <div class="brand-logo">
+            <i class="fa-solid fa-cube"></i> FitVision
+        </div>
+    </div>
+
+    <div class="split-container">
+        
+        <div class="left-panel">
+            <div class="content-wrapper">
+                <h1>Welcome Back!</h1>
+                <p>We saved your fits. Let’s pick up where you left off.</p>
+                <button class="btn-transparent">Sign In</button>
+            </div>
+            <div class="bg-overlay"></div>
+        </div>
+
+        <div class="right-panel">
+            <div class="form-container">
+                <h2>Create Your Account</h2>
+                <div class="title-underline"></div>
+                <p class="subtitle">Start your FitVision journey and never settle for guesswork</p>
+
+                <form id="signupForm">
+                    <div class="input-group">
+                        <input type="text" id="username" required placeholder=" ">
+                        <label for="username">Username</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder=" " class="simple-input">
+                        <label for="email" class="faded-label">Email</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" id="password" required placeholder=" " class="simple-input">
+                        <label for="password" class="faded-label">Password</label>
+                        <i class="fa-regular fa-eye password-icon"></i>
+                    </div>
+
+                    <button type="submit" class="btn-solid">SIGN UP</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+<script src="authsign.js"></script>
+
+</body>
+</html>

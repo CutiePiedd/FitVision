@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitVision - Sign In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+s
+    <div class="logo-overlay">
+        <a href="index.html" style="text-decoration:none;">
+            <div class="brand-logo">
+                <i class="fa-solid fa-cube"></i> FitVision
+            </div>
+        </a>
+    </div>
+
+    <div class="split-container">
+        
+        <div class="left-panel">
+            <div class="content-wrapper">
+                <h1>New Here?</h1>
+                <p>Discover your perfect fit with our AI technology. Create an account to get started.</p>
+                <a href="signup.html">
+                    <button class="btn-transparent">Create Account</button>
+                </a>
+            </div>
+            <div class="bg-overlay"></div>
+        </div>
+
+        <div class="right-panel">
+            <div class="form-container">
+                <h2>Sign In</h2>
+                <div class="title-underline"></div>
+                <p class="subtitle">Welcome back! Please login to your account.</p>
+
+                <form id="loginForm" novalidate>
+
+                    <div class="input-group">
+                        <input type="text" id="username" required placeholder=" " class="simple-input" style="border: 2px solid #3c9d9b;">
+                        <label for="username" style="color:#3c9d9b;">Username</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" id="password" required placeholder=" " class="simple-input">
+                        <label for="password" class="faded-label">Password</label>
+                        <i class="fa-regular fa-eye password-icon"></i>
+                    </div>
+
+                    <div class="form-footer">
+                        <a href="#" class="forgot-pass">Forgot your password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-solid">SIGN IN</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+<script src="auth.js"></script>
+
+</body>
+</html>

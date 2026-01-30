@@ -1,0 +1,292 @@
+/* --- Global Reset --- */
+:root {
+    --primary-teal: #00cec9;
+    --dark-teal: #008b8b;
+    --btn-color: #0f8686; 
+    --text-dark: #2d3436;
+    --text-light: #636e72;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Prevents scrollbars on desktop */
+}
+
+/* --- Logo Overlay --- */
+.logo-overlay {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    z-index: 100; /* Ensures it sits on top of everything */
+}
+
+.brand-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white); /* White logo to contrast with the colored background */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand-logo i {
+    color: #b2bec3; /* Softer color for the icon, or keep white */
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+/* --- Split Layout --- */
+.split-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* --- Left Panel (Cyan/Teal) --- */
+.left-panel {
+    flex: 1; /* Takes up about 40% of space */
+    background: linear-gradient(135deg, #00d2d3 0%, #00cec9 100%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 40px;
+    overflow: hidden;
+}
+
+/* Creating the diagonal stripe effect with CSS */
+.bg-overlay {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 40px,
+        transparent 40px,
+        transparent 80px
+    );
+    z-index: 1;
+}
+
+.left-panel .content-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+}
+
+.left-panel h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.left-panel p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.btn-transparent {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    padding: 12px 50px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-transparent:hover {
+    background: var(--white);
+    color: var(--primary-teal);
+    transform: scale(1.05);
+}
+
+/* --- Right Panel (White Form) --- */
+.right-panel {
+    flex: 1.4; /* Takes up about 60% of space */
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #176B6B; /* Dark teal color from image */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.title-underline {
+    height: 4px;
+    width: 150px;
+    background: #176B6B;
+    margin: 0 auto 25px;
+    border-radius: 2px;
+}
+
+.subtitle {
+    color: #95a5a6;
+    margin-bottom: 40px;
+    font-size: 0.95rem;
+}
+
+/* --- Input Fields --- */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+    background: transparent;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-teal);
+}
+
+/* Specialized label styling to match design */
+.input-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b2bec3;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    background: var(--white);
+    padding: 0 5px;
+}
+
+/* Logic to move label up when focused or has text */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    top: 0;
+    font-size: 0.85rem;
+    color: #176B6B; /* Teal text for active label */
+}
+
+/* Specific style for Username to match the "blue border" look in image */
+#username {
+    border: 2px solid #3c9d9b; /* Distinctive teal border */
+}
+#username:focus ~ label,
+#username:not(:placeholder-shown) ~ label {
+    color: #3c9d9b;
+}
+
+.password-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b2bec3;
+    cursor: pointer;
+}
+
+/* --- Sign Up Button --- */
+.btn-solid {
+    width: 50%;
+    padding: 15px;
+    background-color: #128C88; /* Deep teal/green */
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(18, 140, 136, 0.3);
+    transition: transform 0.2s;
+}
+
+.btn-solid:hover {
+    transform: translateY(-2px);
+    background-color: #0e706d;
+}
+
+/* --- Responsive Mobile View --- */
+@media (max-width: 900px) {
+    body {
+        overflow: auto; /* Allow scrolling on mobile */
+        height: auto;
+    }
+
+    .split-container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        padding: 60px 20px;
+        min-height: 300px;
+    }
+
+    .logo-overlay {
+        top: 20px;
+        left: 20px;
+    }
+    
+    .right-panel {
+        padding: 50px 20px;
+    }
+    
+    .btn-solid {
+        width: 100%;
+    }
+}
+/* --- Add this to the bottom of style.css --- */
+
+.form-footer {
+    text-align: right;
+    margin-top: -15px; /* Pull it closer to the password field */
+    margin-bottom: 20px;
+}
+
+.forgot-pass {
+    color: #b2bec3;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-pass:hover {
+    color: var(--primary-teal);
+    text-decoration: underline;
+}
